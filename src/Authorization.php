@@ -69,7 +69,7 @@ class Authorization
      *
      * @return DateTimeInterface|static
      */
-    public static function cacheExpiresIn(DateTimeInterface $date = null)
+    public static function cacheExpiresIn(DateTimeInterface|null $date = null)
     {
         if (is_null($date)) {
             return static::$cacheExpiresAt ?? now()->addDay();
